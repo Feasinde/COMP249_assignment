@@ -1,0 +1,61 @@
+import java.util.Enumeration;
+
+public class Magazine extends PaperPublication {
+	
+    public enum PaperQuality {
+    	LOW(1), 
+    	NORMAL(2), 
+    	HIGH(3);
+    	
+        private final int paperCode;
+        //Associates paper quality with integer value
+        PaperQuality(int paperCode) {
+            this.paperCode = paperCode;
+            };
+    }
+    
+    public enum IssuingFrequency {
+    	WEEKLY(1), 
+    	MONTHLY(1), 
+    	YEARLY(3);
+    	
+        private final int issueCode;
+        //Associates issue frequency with integer value
+        IssuingFrequency(int issueCode) {
+            this.issueCode = issueCode;
+            };
+    }
+
+        
+    PaperQuality paperQuality;
+    IssuingFrequency issuingFrequency;
+
+    //Default Constructor
+    public Magazine() {
+        paperQuality = null; 
+        issuingFrequency = null; 
+        
+    //Accessors
+
+    };
+        
+        
+    //Mutators
+        
+        
+        
+        
+    }
+    //Parametrized Constructor
+    public Magazine (PaperQuality paperQuality,IssuingFrequency issuingFrequency){
+      paperQuality = this.paperQuality;
+      issuingFrequency = this.issuingFrequency;
+    }
+    
+    //toString method returns values of Magazine attributes
+    public String toString(){
+    	return "The paper quality of this magazine is " + paperQuality + "." +
+    			"It is issued " + issuingFrequency + ".";
+    }
+		
+}

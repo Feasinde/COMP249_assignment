@@ -1,0 +1,11 @@
+
+
+public class Magazine extends PaperPublication {
+	
+	public enum Level {
+	    HIGH,
+	    MEDIUM,
+	    LOW
+	}
+
+}

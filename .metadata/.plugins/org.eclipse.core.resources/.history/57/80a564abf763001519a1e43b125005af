@@ -1,0 +1,28 @@
+
+
+public class Magazine extends PaperPublication {
+	
+    public enum PaperQuality {LOW, NORMAL, HIGH};
+    public enum IssuingFrequency {WEEKLY, MONTHLY, YEARLY};
+
+    PaperQuality paperQuality;
+    IssuingFrequency issuingFrequency;
+
+    //Default Constructor
+    public Magazine() {
+        paperQuality = null; 
+        issuingFrequency = null; 
+    }
+    //Parametrized Constructor
+    public Magazine (PaperQuality paperQuality,IssuingFrequency issuingFrequency){
+      paperQuality = this.paperQuality;
+      issuingFrequency = this.issuingFrequency;
+    }
+    
+    //toString method returns values of Magazine attributes
+    public String toString(){
+    	return "The paper quality of this magazine is " + paperQuality + "." +
+    			"It is issued " + issuingFrequency + ".";
+    }
+		
+}

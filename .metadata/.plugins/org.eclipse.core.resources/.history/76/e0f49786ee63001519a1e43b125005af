@@ -1,0 +1,16 @@
+
+
+public class Magazine extends PaperPublication {
+	
+	public enum quality {
+	    HIGH,
+	    MEDIUM,
+	    LOW
+	}
+	public enum frequency {
+	    WEEKLY,
+	    MONTHLY,
+	    YEARLY
+	}
+
+}
