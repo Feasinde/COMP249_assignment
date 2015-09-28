@@ -20,6 +20,7 @@ public class Magazine extends PaperPublication {
 
     //Default Constructor
     public Magazine() {
+    	super();
         this.paperQuality = null; 
         this.issuingFrequency = null; 
         
