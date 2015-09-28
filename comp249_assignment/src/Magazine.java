@@ -11,7 +11,7 @@ public class Magazine extends PaperPublication {
     public enum IssuingFrequency {
     	WEEKLY, 
     	MONTHLY, 
-    	YEARLY  	
+    	YEARLY;  	
     }
 
         
