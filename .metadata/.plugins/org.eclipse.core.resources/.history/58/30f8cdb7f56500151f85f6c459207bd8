@@ -1,4 +1,7 @@
 
+/**Still brainstorming ------------ UNDER CONSTRUCTION **/
+
+
 public class Magazine extends PaperPublication {
 
 	public enum PaperQuality {
@@ -24,7 +27,13 @@ public class Magazine extends PaperPublication {
         this.issuingFrequency = null; 
         
     	};  
-    		
+    	
+    //Overloaded Contstructor that takes Paper Quality as a parameter
+    	public Magazine(Paperquality paperQuality){
+    		paperQuality = this.paperQuality;
+    	}
+    	
+    	
     //Parametrized Constructor that will take Paper Quality and Issuing Frequency as a parameter
     	public Magazine(double price,int number_of_pages,PaperQuality paperQuality, IssuingFrequency issuingFrequency){
     	super(price,number_of_pages); 

@@ -1,4 +1,7 @@
 
+/**Still brainstorming ------------ UNDER CONSTRUCTION **/
+
+
 public class Magazine extends PaperPublication {
 
 	public enum PaperQuality {

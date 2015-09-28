@@ -1,4 +1,14 @@
 
+/**Still brainstorming ------------ UNDER CONSTRUCTION
+This is here just to show that I actually *am* working on it :P
+Completely aware that it needs to be fixed up
+I will continue it Monday and see what other contributions I can make...
+feel free to edit it.
+Keep calm and join the dark side...
+Hail Sithis!
+These unnecessary comments will be deleted when this file is  completed **/
+
+
 public class Magazine extends PaperPublication {
 
 	public enum PaperQuality {
@@ -20,16 +30,16 @@ public class Magazine extends PaperPublication {
 
     //Default Constructor
     public Magazine() {
+    	this.price =0;
         this.paperQuality = null; 
         this.issuingFrequency = null; 
         
-    	};  
-    		
-    //Parametrized Constructor that will take Paper Quality and Issuing Frequency as a parameter
-    	public Magazine(double price,int number_of_pages,PaperQuality paperQuality, IssuingFrequency issuingFrequency){
-    	super(price,number_of_pages); 
-    	this.paperQuality=paperQuality;
-    	this.issuingFrequency = issuingFrequency;
+    	};
+    	
+    //Parametrized Constructor
+    	public Magazine(PaperQuality paperQuality, IssuingFrequency issuingFrequency){
+    	 this.paperQuality=paperQuality;
+    	 this.issuingFrequency = issuingFrequency;
     	 
     	};
     	
