@@ -28,15 +28,29 @@ public class Journal extends PaperPublication{
 	}
 	
 	//equals method returns true iff all attributes between compared objects are the same
-	public boolean equals(Journal publication){
-		if(this.price == publication.price && 
-				this.number_of_pages == publication.number_of_pages &&
-				this.issue_number == publication.issue_number &&
-				this.specialty_field == publication.specialty_field){
-			return true;
+	//equals must be overridden  as it is inherited from the Object class
+	
+	public boolean equals(Object publication){
+		if(publication == null){ //make sure the parameter is not null
+			return false;
+			
+		}
+		else if(getClass() != publication.getClass()) //make sure the parameter is the same class as the compared object
+		{
+			return false;
+		}
+		else{
+			Journal journalPublication = (Journal) publication; //type cast parameter into PaperClass class
+			if(this.price == journalPublication.price && 
+					this.number_of_pages == journalPublication.number_of_pages && 
+					this.issue_number == journalPublication.issue_number && 
+					specialty_field.equalsIgnoreCase(journalPublication.specialty_field)){
+				return true;
+			}
 		}
 		return false;
 	}
+
 	//accessors and mutators return or set new values for attributes
 	public int getIssue(){
 		return this.issue_number;
