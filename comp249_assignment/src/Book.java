@@ -1,85 +1,97 @@
-package Books;
-
-import paperPublication.PaperPublication;
 
 public class Book extends PaperPublication {
 
-	private long Isbn;
-	private int IssueYear;
-	private String Title, AuthorName;
+	private long isbn;
+	private int issueYear;
+	private String title, authorname;
 	
 	//Default Constructor set parameters to null//
 	
 		public Book (){
 			super();
-			this.Isbn = 0;
-			this.IssueYear= 0;
-			this.Title = null;
-			this.AuthorName = null;
+			this.isbn = 0;
+			this.issueYear= 0;
+			this.title = null;
+			this.authorname = null;
 			
 		}
 	
 	// Parametrised Constructor //
 		
-		public Book (double price, int number_of_pages, long Isbn, int IssueYear, String Title, String AuthorName){
+		public Book (double price, int number_of_pages, long ssbn, int issueYear, String title, String authorname){
 
 			super(price, number_of_pages);
-			this.Isbn = Isbn;
-			this.IssueYear= IssueYear;
-			this.Title = Title;
-			this.AuthorName = AuthorName;
+			this.isbn = isbn;
+			this.issueYear= issueYear;
+			this.title = title;
+			this.authorname = authorname;
 		}
 		
-		//returns value of ISBN//
-		public long getIsbn(){
-			return this.Isbn;
+		//returns value of isbn//
+		public long getisbn(){
+			return this.isbn;
 		}
 		
-		//Mutator for the ISBN//
-		public void setIsbn(long Isbn){
-			this.Isbn = Isbn;
+		//Mutator for the isbn//
+		public void setisbn(long isbn){
+			this.isbn = isbn;
 		}
 		
 		//returns value of the issue year//
-		public int getIssueYear (){
-			return this.IssueYear;
+		public int getissueYear (){
+			return this.issueYear;
 		}
 		
 		//mutator for the Issue Year//
-		public void setIssueYear (int IssueYear){
-			this.IssueYear = IssueYear;
+		public void setissueYear (int issueYear){
+			this.issueYear = issueYear;
 		}
 		
-		//returns the Title//
-		public String getTitle(){
-			return this.Title;
+		//returns the title//
+		public String gettitle(){
+			return this.title;
 		}
 		
-		//mutator for the Title of book//
-		public void setTitle(String Title){
-			this.Title = Title;			
+		//mutator for the title of book//
+		public void settitle(String title){
+			this.title = title;			
 		}
 		
 		//Returns the name of the author//
-		public String getAuthorName (){
-			return this.AuthorName;
+		public String getauthorname (){
+			return this.authorname;
 		}
 		//mutator for the name of the author//
-		public void setAuthorName(String AuthorName){
-			this.AuthorName = AuthorName;
+		public void setauthorname(String authorname){
+			this.authorname = authorname;
 		}
 		//considering if a period is entered in original PaperPublication class//
 		public String toString(){
-			return super.toString() + " This book is titled \" " + Title + " \", by " + AuthorName + ", was issued in " +
-								IssueYear + " and its ISBN is "+ Isbn+".";
+			return super.toString() + " This book is titled \" " + title + " \", by " + authorname + ", was issued in " +
+								issueYear + " and its isbn is "+ isbn+".";
 		}
 		
-		//equals method to ensure no other book is the same//
-		public boolean equals(Book newBook){
-			if(super.equals(newBook)&&this.Isbn == newBook.Isbn && this.IssueYear == newBook.IssueYear && this.AuthorName == newBook.AuthorName &&
-					this.Title == newBook.Title){
-				return true;
+		//equals method returns true iff all attributes between compared objects are the same
+		//equals must be overridden  as it is inherited from the Object class
+		
+		public boolean equals(Object publication){
+			if(publication == null){ //make sure the parameter is not null
+				return false;
+				
 			}
-					return false;					
+			else if(getClass() != publication.getClass()) //make sure the parameter is the same class as the compared object
+			{
+				return false;
 			}
+			else{
+				Book book = (Book) publication; //type cast parameter into PaperClass class
+				if(this.isbn == book.isbn &&
+				this.issueYear == book.issueYear &&
+				this.title.equalsIgnoreCase(book.title) &&
+				this.authorname == book.authorname){
+					return true;
+				}
+			}
+			return false;
+		}
 }		
