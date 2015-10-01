@@ -1,3 +1,5 @@
+import journal.Journal;
+
 
 
 public class EducationBook extends Book {
@@ -40,13 +42,31 @@ public void setSpecialtyField(String specialty_field){
 	specialty_field = this.specialty_field;
 }
 
-//Equals constructor
-public boolean equals(EducationBook newEducationBook){
-	if(super.equals(newEducationBook) && this.editionNum == newEducationBook.editionNum &&
-	this.specialty_field.equalsIgnoreCase(newEducationBook.specialty_field)){
-		return true;
+//equals method returns true iff all attributes between compared objects are the same
+//equals must be overridden  as it is inherited from the Object class
+
+public boolean equals(Object publication){
+	if(publication == null){ //make sure the parameter is not null
+		return false;
+		
 	}
-	return false;}
+	else if(getClass() != publication.getClass()) //make sure the parameter is the same class as the compared object
+	{
+		return false;
+	}
+	else{
+		EducationBook book = (EducationBook) publication; //type cast parameter into PaperClass class
+		if(this.isbn == book.isbn &&
+		this.issueYear == book.issueYear &&
+		this.title.equalsIgnoreCase(book.title) &&
+		this.authorname == book.authorname &&
+		this.editionNum == book.editionNum &&
+		this.specialty_field == book.specialty_field){
+			return true;
+		}
+	}
+	return false;
+}
 //toString method
 
 public String toString(){

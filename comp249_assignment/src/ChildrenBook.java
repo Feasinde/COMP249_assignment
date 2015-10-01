@@ -1,7 +1,3 @@
-package Books;
-
-import Books.Book;
-
 public class ChildrenBook extends Book {
 	
 	public int min_age;
@@ -15,8 +11,8 @@ public class ChildrenBook extends Book {
 	}
 
 	//Parametrized Constructor//
-	public ChildrenBook (double price, int number_of_pages, long Isbn, int IssueYear, String Title, String AuthorName, int min_age){
-		super(price,number_of_pages,Isbn,IssueYear,Title, AuthorName);
+	public ChildrenBook (double price, int number_of_pages, long isbn, int issueYear, String title, String authorName, int min_age){
+		super(price,number_of_pages,isbn,issueYear,title, authorName);
 		this.min_age=min_age;
 	}
 	
@@ -32,13 +28,28 @@ public class ChildrenBook extends Book {
 	public String toString(){
 		return super.toString() + " It is suitable for ages "+min_age+" and up.";
 	}
-	//Equals Method//
-	public boolean equals(ChildrenBook newChildrenBook){
-		if(super.equals(newChildrenBook) && this.min_age == newChildrenBook.min_age){
-			return true;
+	//equals method returns true iff all attributes between compared objects are the same
+	//equals must be overridden  as it is inherited from the Object class
+	
+	public boolean equals(Object publication){
+		if(publication == null){ //make sure the parameter is not null
+			return false;
+			
+		}
+		else if(getClass() != publication.getClass()) //make sure the parameter is the same class as the compared object
+		{
+			return false;
+		}
+		else{
+			ChildrenBook book = (ChildrenBook) publication; //type cast parameter into PaperClass class
+			if(this.isbn == book.isbn &&
+			this.issueYear == book.issueYear &&
+			this.title.equalsIgnoreCase(book.title) &&
+			this.authorname == book.authorname){
+				return true;
+			}
 		}
 		return false;
-	
 	}
 	
 }

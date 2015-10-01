@@ -1,9 +1,11 @@
+import publications.PaperPublication;
 
 public class Book extends PaperPublication {
 
-	private long isbn;
-	private int issueYear;
-	private String title, authorname;
+	protected long isbn;
+	protected int issueYear;
+	protected String title;
+	protected String authorname;
 	
 	//Default Constructor set parameters to null//
 	
@@ -18,7 +20,7 @@ public class Book extends PaperPublication {
 	
 	// Parametrised Constructor //
 		
-		public Book (double price, int number_of_pages, long ssbn, int issueYear, String title, String authorname){
+		public Book (double price, int number_of_pages, long isbn, int issueYear, String title, String authorname){
 
 			super(price, number_of_pages);
 			this.isbn = isbn;
