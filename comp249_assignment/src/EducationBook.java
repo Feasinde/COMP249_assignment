@@ -1,6 +1,3 @@
-import journal.Journal;
-
-
 
 public class EducationBook extends Book {
 	
