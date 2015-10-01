@@ -6,7 +6,7 @@ Holds the source code of the COMP 249 assignment on inheritance as written by th
 Our code is now organised into packages in the directory called “packages”:
 
 * *book* contains `Book.class`, `ChildrenBook.class`, and `EducationBook.class`
-* *journal* contains Journal.class
+* *journal* contains `Journal.class`
 * *magazine* contains `Magazine.class`
 * *publications* contains `PaperPublications.class`
 
