@@ -75,7 +75,7 @@ public class Book extends PaperPublication {
 								issueYear + " and its isbn is "+ isbn+".";
 		}
 		
-		//equals method returns true iff all attributes between compared objects are the same
+		//equals method returns true if all attributes between compared objects are the same
 		//equals must be overridden  as it is inherited from the Object class
 		public boolean equals(Object publication){
 			if(publication == null){ //make sure the parameter is not null
