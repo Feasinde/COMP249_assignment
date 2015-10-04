@@ -1,3 +1,0 @@
-This is a file that contains nothing but a self-referential line.
-
-It now includes an additional test string. Please ignore.

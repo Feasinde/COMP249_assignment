@@ -1,11 +1,9 @@
-package driver;
-
 import java.util.ArrayList;
 
 import publications.PaperPublication;
 import book.Book;
 import book.ChildrenBook;
-import book.EducationalBook;
+import book.EducationBook;
 import journal.Journal;
 import magazine.Magazine;
 
@@ -20,7 +18,7 @@ public class Driver {
 		PaperPublication p1 = new PaperPublication(), p2 = new PaperPublication(2.0, 5), p3 = new PaperPublication(5.0, 50);
 		Book p4 = new Book(), p5 = new Book(15.0, 200, 0, 1990, null, null), p6 = new Book(1.0, 100, 0, 2000, null, null);
 		ChildrenBook p7 = new ChildrenBook();
-		EducationalBook p8 = new EducationalBook();
+		EducationBook p8 = new EducationBook();
 		Journal p9 = new Journal();
 		Magazine p10 = new Magazine();
 		
