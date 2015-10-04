@@ -14,12 +14,14 @@ public class Journal extends PaperPublication{
 	}
 
 	//Overloaded constructor takes issue_number as parameter
-	public Journal(int issue_number){
+	public Journal(double price, int number_of_pages, int issue_number){
+		super(price, number_of_pages);
 		this.issue_number = issue_number;
 	}
 
 	//Overloaded constructor takes issue_number and specialty_field as parameters
-	public Journal(int issue_number, String specialty_field){
+	public Journal(double price, int number_of_pages, int issue_number, String specialty_field){
+		super(price, number_of_pages);
 		this.issue_number = issue_number;
 		this.specialty_field = specialty_field;
 	}

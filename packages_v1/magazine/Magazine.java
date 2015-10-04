@@ -4,14 +4,14 @@ import publications.PaperPublication;
 
 public class Magazine extends PaperPublication {
 
-	public enum PaperQuality {
+	enum PaperQuality {
 	    LOW,
 	    MEDIUM,
 	    HIGH;
 	   
 	}
    
-    public enum IssuingFrequency {
+    enum IssuingFrequency {
     	WEEKLY, 
     	MONTHLY, 
     	YEARLY;  	
@@ -66,27 +66,19 @@ public class Magazine extends PaperPublication {
     //equals method returns true iff all attributes between compared objects are the same
   	//equals must be overridden  as it is inherited from the Object class
   	public boolean equals(Object publication){
-  		if(publication == null){ //make sure the parameter is not null
-  			return false;
-  			
-  		}
-  		else if(getClass() != publication.getClass()) //make sure the parameter is the same class as the compared object
-  		{
-  			return false;
-  		}
-  		else{
-  			Magazine magazine = (Magazine) publication; //type cast parameter into Magazine class
+  		Magazine magazine = (Magazine) publication; //type cast parameter into Magazine class
   			if(this.getPrice() == magazine.getPrice() && 
   					this.getNumber_of_pages() == magazine.getNumber_of_pages() && 
   					this.paperQuality == magazine.paperQuality && 
   					this.issuingFrequency == magazine.issuingFrequency){
   				return true;
   			}
-  		}
+  		
   		return false;
   	}
     
 
 }
+
 
 
