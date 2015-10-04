@@ -23,7 +23,7 @@ public class PaperPublication {
 	
 	//toString method returns values of attributes
 	public String toString(){
-		return "This paper publication has " + number_of_pages + " pages and costs $" + price;
+		return "This paper publication has " + number_of_pages + " pages and costs $" + price + ".";
 	}
 	
 	//equals method returns true iff all attributes between compared objects are the same

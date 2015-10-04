@@ -59,7 +59,7 @@ public class Magazine extends PaperPublication {
     
     //toString method returns values of Magazine attributes
     public String toString(){
-    	return super.toString() + "The paper quality of this magazine is " + paperQuality + "." +
+    	return super.toString() + " The paper quality of this magazine is " + paperQuality + "." +
     			"It is issued " + issuingFrequency + ".";
     }
 
