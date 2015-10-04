@@ -44,10 +44,10 @@ public class ChildrenBook extends Book {
 			ChildrenBook book = (ChildrenBook) publication; //type cast parameter into ChildrenBook class
 			if(this.getPrice() == book.getPrice() &&
 					this.getNumber_of_pages() == book.getNumber_of_pages() &&
-					this.getisbn() == book.getisbn() &&
-					this.getissueYear() == book.getissueYear() &&
-					this.gettitle().equalsIgnoreCase(book.gettitle()) &&
-					this.getauthorname() == book.getauthorname() &&
+					this.isbn == book.isbn &&
+					this.issueYear == book.issueYear &&
+					this.title.equalsIgnoreCase(book.title) &&
+					this.authorname == book.authorname &&
 					this.min_age == book.min_age){
 				return true;
 			}
@@ -56,4 +56,3 @@ public class ChildrenBook extends Book {
 	}
 	
 }
-

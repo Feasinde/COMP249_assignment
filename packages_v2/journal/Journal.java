@@ -73,3 +73,4 @@ public class Journal extends PaperPublication{
 		this.specialty_field = specialty_field;
 	}
 }
+

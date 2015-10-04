@@ -2,8 +2,8 @@ package publications;
 
 public class PaperPublication {
 
-	double price;
-	int number_of_pages;
+	private double price;
+	private int number_of_pages;
 	
 	//Default constructor with not parameters initialises attributes to 0
 	public PaperPublication(){
@@ -67,3 +67,4 @@ public class PaperPublication {
 		this.number_of_pages = number_of_pages;
 	}
 }
+
