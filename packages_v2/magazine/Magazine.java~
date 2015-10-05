@@ -4,22 +4,22 @@ import publications.PaperPublication;
 
 public class Magazine extends PaperPublication {
 
-	enum PaperQuality {
+	private enum PaperQuality {
 	    LOW,
 	    MEDIUM,
 	    HIGH;
 	   
 	}
    
-    enum IssuingFrequency {
+    private enum IssuingFrequency {
     	WEEKLY, 
     	MONTHLY, 
     	YEARLY;  	
     }
 
         
-    PaperQuality paperQuality;
-    IssuingFrequency issuingFrequency;
+    private PaperQuality paperQuality;
+    private IssuingFrequency issuingFrequency;
 
     //Default Constructor
     public Magazine() {
@@ -88,6 +88,7 @@ public class Magazine extends PaperPublication {
     
 
 }
+
 
 
 

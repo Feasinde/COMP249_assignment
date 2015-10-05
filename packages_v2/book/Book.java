@@ -71,7 +71,7 @@ public class Book extends PaperPublication {
 		}
 		//considering if a period is entered in original PaperPublication class//
 		public String toString(){
-			return super.toString() + " This book is titled \" " + title + " \", by " + authorname + ", was issued in " +
+			return super.toString() + " This book is titled \"" + title + "\", by " + authorname + ", was issued in " +
 								issueYear + " and its isbn is "+ isbn+".";
 		}
 		
@@ -100,4 +100,5 @@ public class Book extends PaperPublication {
 			return false;
 		}
 }		
+
 

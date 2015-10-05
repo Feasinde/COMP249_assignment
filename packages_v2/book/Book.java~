@@ -4,10 +4,10 @@ import publications.PaperPublication;
 
 public class Book extends PaperPublication {
 
-	protected long isbn;
-	protected int issueYear;
-	protected String title;
-	protected String authorname;
+	private long isbn;
+	private int issueYear;
+	private String title;
+	private String authorname;
 	
 	//Default Constructor set parameters to null//
 	
@@ -100,3 +100,4 @@ public class Book extends PaperPublication {
 			return false;
 		}
 }		
+
