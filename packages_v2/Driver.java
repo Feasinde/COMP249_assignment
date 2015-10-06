@@ -1,21 +1,21 @@
-//------------------------------------------------------------------	//
-//Assignment 1								//
-//Part 2: All attributes on all classes have been set to “private”	//
-//and each equals method checks for null parameters and class match	//
-//Written by:														//
-//Laura Elena González 27217323										//
-//Victoria Avgoustis 27529198										//
-//Stevie Gabbay 24790968											//
-//Andrés Lou 24712374												//
-//------------------------------------------------------------------//
-//1. Creates 10 objects belonging to the class PaperPublications or //
-//any of of its subclasses (Book, Magazine, Journal) or any of their//
-//subclasses														//
-//2. Tests the equals() method of some of the classes				//
-//3. Creates an array of ten PaperPublication objects and finds the	//
-//object with the lowest price										//
+//----------------------------------------------------------------------//
+//Assignment 1															//
+//Part 2: All attributes on all classes have been set to "private"		//
+//and each equals method checks for null parameters and class match		//
+//Written by:															//
+//Laura Elena Gonzalez 27217323											//
+//Victoria Avgoustis 27529198											//
+//Stevie Gabbay 27490968												//
+//Andr�s Lou 24712374													//
+//----------------------------------------------------------------------//
+//1. Creates 10 objects belonging to the class PaperPublications or 	//
+//any of of its subclasses (Book, Magazine, Journal) or any of their	//
+//subclasses															//
+//2. Tests the equals() method of some of the classes					//
+//3. Creates an array of ten PaperPublication objects and finds the		//
+//object with the lowest price											//
 
-import java.util.ArrayList;
+package driver;
 
 import publications.PaperPublication;
 import book.Book;
@@ -27,11 +27,17 @@ import magazine.Magazine;
 public class Driver {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
-	//Creates object of each one of the classes	
-		System.out.println("Will create an object from each"
+		//displays welcome message
+		System.out.println("1Welcome to our program. Written By: \nAndr�s Lou, Laura Elena Gonzalez,"
+				+ " Stevie Gabbay, and Victoria Avgoustis.\n");		
+		
+		//displaying to the user what the program is about to do
+		System.out.println("Will create objects from each"
 				+ " of the 6 classes.");
 		
+		//creating objects from the classes
 		PaperPublication 
 				p1 = new PaperPublication(), 
 				p2 = new PaperPublication(2.0, 5), 
@@ -49,7 +55,8 @@ public class Driver {
 				p9 = new Journal(39.99,40,42,"Hypothetical Cat Juggling");
 		Magazine 
 				p10 = new Magazine();
-	//Display the information of each object via its toString() method		
+		
+		//display the information of the objects using the toString() method
 		System.out.println("The first PaperPublication: " + p1);
 		System.out.println("The second PaperPublication: " + p2);
 		System.out.println("The third PaperPublication: " + p3);
@@ -58,11 +65,12 @@ public class Driver {
 		System.out.println("The six PaperPublication: " + p6);
 		System.out.println("The seventh PaperPublication: " + p7);
 		System.out.println("The eight PaperPublication: " + p8);
-		System.out.println("The ninth PaperPublication: " + p9);
+		System.out.println("The nineth PaperPublication: " + p9);
 		System.out.println("The tenth PaperPublication: " + p10);
 		
 		System.out.println();
-	//Test the equals() method of two different objects
+		
+		//testing of equality of some objects using the equals() method
 		if(p1.equals(p2))
 			System.out.println("The two PaperPublications p1 & p2 are equal");
 		else
@@ -72,34 +80,33 @@ public class Driver {
 			System.out.println("The two Books b1 & b2 are equal");
 		else
 			System.out.println("The two Books b1 & b2 are not equal");
-
-	//Create array that contains all 10 ojbects created
-		ArrayList<PaperPublication> arraylist = new ArrayList<PaperPublication>(10);
-		arraylist.add(p1);
-		arraylist.add(p2);
-		arraylist.add(p3);
-		arraylist.add(p4);
-		arraylist.add(p5);
-		arraylist.add(p6);
-		arraylist.add(p7);
-		arraylist.add(p8);
-		arraylist.add(p9);
-		arraylist.add(p10);
 		
-		PaperPublication[] array = new PaperPublication[arraylist.size()];
-		arraylist.toArray(array);
+		//creating an object array
+		PaperPublication[] publicationsArray = {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10};
 		
 		System.out.println();
 		
-		for(int i=0; i<array.length; i++)
+		//finding the cheapest price in the array
+		int minPrice = 0;
+		for(int i=0; i<publicationsArray.length; i++)
 		{
-			if (array[0].getPrice()==array[i].getPrice())
+			for(int j=0; j<publicationsArray.length; j++)
+			{
+				if (publicationsArray[minPrice].getPrice()>publicationsArray[j].getPrice())
 				{
-					System.out.println("PaperPublication at index: " + i + " is cheapest.");
-					System.out.println(array[i]);
+					minPrice=j;
 				}
-		
+			}
+			
+			if (publicationsArray[minPrice].getPrice()==publicationsArray[i].getPrice())
+			{
+				System.out.println("PaperPublication at index: " + i + " is cheapest.");
+				System.out.println(publicationsArray[i]);
+			}
 		}
+		
+		//displays good bye message
+		System.out.println("\nEnd of Program. \nThank you and Good Bye.");
 
 	}
 

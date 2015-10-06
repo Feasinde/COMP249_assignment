@@ -16,8 +16,8 @@ public EducationBook(){
 public EducationBook(double price, int number_of_pages, 
 	long Isbn, int IssueYear, String Title, String AuthorName,int editionNum, String specialty_field){
 super(price, number_of_pages, Isbn, IssueYear, Title, AuthorName);
-this.edictionNum = editionNum;
-this.specialty = specialty_field;
+this.editionNum = editionNum;
+this.specialty_field = specialty_field;
 }
 
 //Accessors
