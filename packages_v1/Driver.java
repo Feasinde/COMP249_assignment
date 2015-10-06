@@ -1,12 +1,12 @@
 //----------------------------------------------------------------------//
 //Assignment 1															//
-//Part 2: All attributes on all classes have been set to "private"		//
-//and each equals method checks for null parameters and class match		//
+//Part 1: Attributes are either private or package on 			//
+//and each equals method checks only for same attributes		//
 //Written by:															//
-//Laura Elena Gonzalez 27217323											//
+//Laura Elena GonzÃ¡lez 27217323											//
 //Victoria Avgoustis 27529198											//
 //Stevie Gabbay 27490968												//
-//Andrés Lou 24712374													//
+//AndrÃ©s Lou 24712374													//
 //----------------------------------------------------------------------//
 //1. Creates 10 objects belonging to the class PaperPublications or 	//
 //any of of its subclasses (Book, Magazine, Journal) or any of their	//
@@ -14,8 +14,6 @@
 //2. Tests the equals() method of some of the classes					//
 //3. Creates an array of ten PaperPublication objects and finds the		//
 //object with the lowest price											//
-
-package driver;
 
 import publications.PaperPublication;
 import book.Book;
@@ -30,7 +28,7 @@ public class Driver {
 		// TODO Auto-generated method stub
 		
 		//displays welcome message
-		System.out.println("1Welcome to our program. Written By: \nAndrés Lou, Laura Elena Gonzalez,"
+		System.out.println("1Welcome to our program. Written By: \nAndrï¿½s Lou, Laura Elena Gonzalez,"
 				+ " Stevie Gabbay, and Victoria Avgoustis.\n");		
 		
 		//displaying to the user what the program is about to do
@@ -87,24 +85,17 @@ public class Driver {
 		System.out.println();
 		
 		//finding the cheapest price in the array
-		int minPrice = 0;
-		for(int i=0; i<publicationsArray.length; i++)
-		{
-			for(int j=0; j<publicationsArray.length; j++)
-			{
-				if (publicationsArray[minPrice].getPrice()>publicationsArray[j].getPrice())
-				{
-					minPrice=j;
-				}
-			}
-			
-			if (publicationsArray[minPrice].getPrice()==publicationsArray[i].getPrice())
-			{
-				System.out.println("PaperPublication at index: " + i + " is cheapest.");
-				System.out.println(publicationsArray[i]);
-			}
-		}
-		
+		//Find the cheapest book and display its information
+        double cheapest = publicationsArray[0].getPrice();
+    	int cheapestIndex = 0;
+    	for(int i = 0;i < publicationsArray.length;i++){
+        		if(publicationsArray[i].getPrice() < cheapest){
+            		cheapestIndex = i;
+        		}
+    	}
+    	System.out.println("The publication at position " + cheapestIndex + " of the array is the cheapest. "
+    	        + publicationsArray[cheapestIndex].toString());
+    	
 		//displays good bye message
 		System.out.println("\nEnd of Program. \nThank you and Good Bye.");
 
