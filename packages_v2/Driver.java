@@ -1,5 +1,5 @@
-//------------------------------------------------------------------//
-//Assignment 1														//
+//------------------------------------------------------------------	//
+//Assignment 1								//
 //Part 2: All attributes on all classes have been set to “private”	//
 //and each equals method checks for null parameters and class match	//
 //Written by:														//
@@ -27,8 +27,8 @@ import magazine.Magazine;
 public class Driver {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
+	//Creates object of each one of the classes	
 		System.out.println("Will create an object from each"
 				+ " of the 6 classes.");
 		
@@ -49,7 +49,7 @@ public class Driver {
 				p9 = new Journal(39.99,40,42,"Hypothetical Cat Juggling");
 		Magazine 
 				p10 = new Magazine();
-		
+	//Display the information of each object via its toString() method		
 		System.out.println("The first PaperPublication: " + p1);
 		System.out.println("The second PaperPublication: " + p2);
 		System.out.println("The third PaperPublication: " + p3);
@@ -62,7 +62,7 @@ public class Driver {
 		System.out.println("The tenth PaperPublication: " + p10);
 		
 		System.out.println();
-		
+	//Test the equals() method of two different objects
 		if(p1.equals(p2))
 			System.out.println("The two PaperPublications p1 & p2 are equal");
 		else
@@ -72,7 +72,8 @@ public class Driver {
 			System.out.println("The two Books b1 & b2 are equal");
 		else
 			System.out.println("The two Books b1 & b2 are not equal");
-		
+
+	//Create array that contains all 10 ojbects created
 		ArrayList<PaperPublication> arraylist = new ArrayList<PaperPublication>(10);
 		arraylist.add(p1);
 		arraylist.add(p2);

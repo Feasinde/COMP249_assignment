@@ -15,8 +15,8 @@ public EducationBook(){
 //Parametrized constructor
 public EducationBook(double price, int number_of_pages, long Isbn, int IssueYear, String Title, String AuthorName,int editionNum, String specialty_field){
 super(price, number_of_pages, Isbn, IssueYear, Title, AuthorName);
-editionNum = this.editionNum;
-specialty_field = this.specialty_field;
+this.editionNum = editionNum;
+this.specialty_field = specialty_field;
 }
 
 //Accessors

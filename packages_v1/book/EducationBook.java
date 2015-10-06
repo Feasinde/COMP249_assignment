@@ -13,10 +13,11 @@ public EducationBook(){
 }
 
 //Parametrized constructor
-public EducationBook(double price, int number_of_pages, long Isbn, int IssueYear, String Title, String AuthorName,int editionNum, String specialty_field){
+public EducationBook(double price, int number_of_pages, 
+	long Isbn, int IssueYear, String Title, String AuthorName,int editionNum, String specialty_field){
 super(price, number_of_pages, Isbn, IssueYear, Title, AuthorName);
-editionNum = this.editionNum;
-specialty_field = this.specialty_field;
+this.edictionNum = editionNum;
+this.specialty = specialty_field;
 }
 
 //Accessors
@@ -59,6 +60,6 @@ public boolean equals(Object publication){
 //toString method
 
 public String toString(){
-	return super.toString() + "The edition number is: " + editionNum + " and the specialty field is: " + specialty_field + ".";
+	return super.toString() + "The edition number is: " + this.editionNum + " and the specialty field is: " + this.specialty_field + ".";
 }
 }
